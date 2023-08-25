@@ -27,4 +27,9 @@ public class UserController {
         return new ResponseEntity<>(userService.addMultipleUserDetails(), HttpStatus.OK);
     }
 
+    @PostMapping(value = "/add-user-via-external-config", produces = "application/json")
+    public ResponseEntity<User> addUserViaExternalConfig() {
+        return new ResponseEntity<>(userService.addUserViaExternalConfig(), HttpStatus.OK);
+    }
+
 }
